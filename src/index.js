@@ -1,4 +1,4 @@
 import "babel-polyfill";
-import world from "./world";
+import value from "./world";
 
-document.getElementById("output").innerHTML = `Hello ${world}!`;
+document.getElementById("output").innerHTML = `Hello ${value}!`;
