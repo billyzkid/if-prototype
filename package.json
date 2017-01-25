@@ -1,9 +1,10 @@
 {
-  "name": "webpack-babel-demo",
-  "version": "1.0.0",
+  "name": "if-prototype",
+  "version": "0.0.1",
   "description": "TODO",
   "author": "Will Allan",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
   "devDependencies": {
     "babel-core": "^6.16.0",
     "babel-loader": "^6.2.5",
