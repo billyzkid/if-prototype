@@ -1,16 +1,15 @@
-// import { Story, Person, Place, Thing } from "../../core";
-import core from "../../core";
+import core, { Person, Place, Thing } from "../../core";
 
-const story = new core.Story();
+const story = new core.Story(); // eslint-disable-line import/no-named-as-default-member
 story.title = "Story #1";
 
-const place = new core.Place(); // eslint-disable-line no-unused-vars
+const place = new Place(); // eslint-disable-line no-unused-vars
 // story.Add(place);
 
-const person = new core.Person(); // eslint-disable-line no-unused-vars
+const person = new Person(); // eslint-disable-line no-unused-vars
 // place.Add(person);
 
-const thing = new core.Thing(); // eslint-disable-line no-unused-vars
+const thing = new Thing(); // eslint-disable-line no-unused-vars
 // person.Add(thing);
 
 // story.on("begin", () => {
