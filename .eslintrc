@@ -6,6 +6,7 @@
     "browser": true
   },
   "rules": {
+    "comma-dangle": ["error", "never"],
     "eol-last": [
       "error",
       "never"
