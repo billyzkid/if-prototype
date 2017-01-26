@@ -22,7 +22,8 @@ module.exports = {
       test: /\.js$/,
       loader: "babel",
       include: path.join(__dirname, "src")
-    }]
+    }],
+    "noParse": /\.map$/
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
