@@ -15,6 +15,7 @@
       "error",
       "windows"
     ],
+    "no-debugger": "warn",
     "quotes": [
       "error",
       "double"
