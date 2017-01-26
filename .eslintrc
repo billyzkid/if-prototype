@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "babel"
+  ],
+  "rules": {
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "no-debugger": "warn"
+  }
+}
