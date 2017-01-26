@@ -16,9 +16,11 @@
     "babel-preset-latest": "^6.22.0",
     "copy-webpack-plugin": "^3.0.1",
     "eslint": "^3.14.1",
-    "eslint-config-babel": "^6.0.0",
+    "eslint-config-airbnb": "^14.0.0",
     "eslint-loader": "^1.6.1",
-    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },

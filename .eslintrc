@@ -1,12 +1,22 @@
 {
   "extends": [
-    "babel"
+    "airbnb"
   ],
+  "env": {
+    "browser": true
+  },
   "rules": {
+    "eol-last": [
+      "error",
+      "never"
+    ],
     "linebreak-style": [
       "error",
       "windows"
     ],
-    "no-debugger": "warn"
+    "quotes": [
+      "error",
+      "double"
+    ]
   }
 }
