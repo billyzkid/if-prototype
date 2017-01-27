@@ -18,16 +18,18 @@ let y = terminal.y + terminal.ybase;
 function getInput() {
   const y1 = y;
   const y2 = terminal.y + terminal.ybase + 1;
+  const x1 = prompt.length;
+  const x2 = terminal.x + (terminal.cols * (y2 - y1 - 1));
 
   let s = "";
 
-  terminal.lines.slice(y1, y2).forEach((a) => {
-    a.forEach((b) => {
-      s += b[1];
+  terminal.lines.slice(y1, y2).forEach((row) => {
+    row.forEach((col) => {
+      s += col[1];
     });
   });
 
-  return s.slice(prompt.length).trim();
+  return s.slice(x1, x2);
 }
 
 terminal.on("key", (key, event) => {
