@@ -1,16 +1,19 @@
-import core, { Person, Place, Thing } from "../../core";
+import { Story, Person, Place, Thing } from "../../core";
 
-const story = new core.Story(); // eslint-disable-line import/no-named-as-default-member
-story.title = "Story #1";
+const story = new Story();
+story.title = "Story 1";
 
-const place = new Place(); // eslint-disable-line no-unused-vars
-// story.Add(place);
+const place = new Place();
+place.name = "Place 1";
+story.children.push(place);
 
-const person = new Person(); // eslint-disable-line no-unused-vars
-// place.Add(person);
+const person = new Person();
+person.name = "Person 1";
+place.children.push(person);
 
-const thing = new Thing(); // eslint-disable-line no-unused-vars
-// person.Add(thing);
+const thing = new Thing();
+thing.name = "Thing 1";
+person.children.push(thing);
 
 // story.on("begin", () => {
 //   this.tell("It was a dark and stormy night.");

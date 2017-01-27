@@ -1,6 +1,7 @@
 class Story {
   constructor() {
-    this.title = "Untitled";
+    this.title = "";
+    this.children = [];
   }
 }
 
