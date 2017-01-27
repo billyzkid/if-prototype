@@ -1,3 +1,6 @@
+// import core from "../../core";
+// import core, { Story, Person, Place, Thing } from "../../core";
+// import * as core from "../../core";
 import { Story, Person, Place, Thing } from "../../core";
 
 const story = new Story();
