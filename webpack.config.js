@@ -33,6 +33,8 @@ module.exports = {
       }
     }),
     new CopyWebpackPlugin([{
+      from: "./src/main.js",
+    }, {
       from: "./src/index.html"
     }, {
       from: "./node_modules/xterm/dist/xterm.css"
