@@ -5,8 +5,9 @@ class Story {
   }
 
   // eslint-disable-next-line class-methods-use-this
+  // eslint-disable-next-line no-unused-vars
   ask(text) {
-    return text;
+    return JSON.stringify(this);
   }
 }
 
