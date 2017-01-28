@@ -9,7 +9,7 @@ const keyCodes = {
 const prompt = "> ";
 const terminal = new Terminal({ cursorBlink: true });
 
-terminal.open(document.getElementById("terminal-container"));
+terminal.open(document.getElementById("app"));
 terminal.write(`\x1b[1;31m${story.title}\x1b[0m`);
 terminal.write(`\r\n\r\n${prompt}`);
 

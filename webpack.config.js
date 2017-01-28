@@ -9,7 +9,7 @@ module.exports = {
     "./src/index"
   ],
   output: {
-    filename: "bundle.js",
+    filename: "index.js",
     path: path.join(__dirname, "build")
   },
   module: {
@@ -26,18 +26,20 @@ module.exports = {
     "noParse": /\.map$/
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        "NODE_ENV": JSON.stringify("development")
-      }
-    }),
     new CopyWebpackPlugin([{
+      from: "./package.json",
+    }, {
       from: "./src/main.js",
     }, {
       from: "./src/index.html"
     }, {
       from: "./node_modules/xterm/dist/xterm.css"
-    }])
+    }]),
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": {
+        "NODE_ENV": JSON.stringify("development")
+      }
+    })
   ]
 };
