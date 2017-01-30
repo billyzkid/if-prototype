@@ -13,11 +13,11 @@ module.exports = {
     path: path.join(__dirname, "build")
   },
   module: {
-    preLoaders: [{
-      test: /\.js$/,
-      loader: "eslint",
-      include: path.join(__dirname, "src")
-    }],
+    // preLoaders: [{
+    //   test: /\.js$/,
+    //   loader: "eslint",
+    //   include: path.join(__dirname, "src")
+    // }],
     loaders: [{
       test: /\.js$/,
       loader: "babel",

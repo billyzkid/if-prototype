@@ -16,7 +16,6 @@ terminal.on("data", (data) => {
     terminal.write(`\x1b[?25l\r\n${output}\x1b[0K\r\n\x1b[0K\r\n${prompt}\x1b[0K\r\x1b[${prompt.length + 1}G\x1b[?25h`);
   } else {
     input += data;
-    const output = `\x1b[?25l\r${prompt}${input}\x1b[0K\r\x1b[${(prompt + input).length + 1}G\x1b[?25h`;
-    terminal.write(output);
+    terminal.write(`\x1b[?25l\r${prompt}${input}\x1b[0K\r\x1b[${(prompt + input).length + 1}G\x1b[?25h`);
   }
 });
