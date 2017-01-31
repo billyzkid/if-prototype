@@ -22,3 +22,8 @@ terminal.on("data", (data) => {
     terminal.write(`\x1b[?25l\r${prompt}${input}\x1b[0K\x1b[?25h`);
   }
 });
+
+// requires target: "electron"
+require("electron").ipcRenderer.on("silly", (event, message) => {
+  terminal.write(message);
+});

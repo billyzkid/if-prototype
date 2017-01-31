@@ -4,6 +4,7 @@ var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devtool: "eval",
+  target: "electron",
   entry: [
     "babel-polyfill",
     "./src/index"
