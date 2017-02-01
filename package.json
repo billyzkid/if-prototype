@@ -32,7 +32,7 @@
     "start": "webpack-dev-server --hot --inline",
     "build": "webpack",
     "electron": "npm run build && electron ./build/main",
-    "electron-package": "electron-packager ./build --out=./dist --asar --overwrite",
-    "electron-package-all": "electron-packager ./build --out=./dist --asar --overwrite --all"
+    "electron-package": "npm run build && electron-packager ./build --out=./dist --asar --overwrite",
+    "electron-package-all": "npm run build && electron-packager ./build --out=./dist --asar --overwrite --all"
   }
 }

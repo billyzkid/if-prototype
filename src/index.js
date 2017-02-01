@@ -24,6 +24,8 @@ terminal.on("data", (data) => {
 });
 
 // requires target: "electron"
-require("electron").ipcRenderer.on("silly", (event, message) => {
-  terminal.write(message);
+require("electron").ipcRenderer.on("did-finish-load-plugins", () => {
+  const generateSillyName = require("sillyname");
+  const sillyName = generateSillyName();
+  terminal.write(sillyName);
 });
