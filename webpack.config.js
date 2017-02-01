@@ -4,14 +4,15 @@ var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   devtool: "eval",
-  target: "electron",
+  target: "web",
   entry: [
     "babel-polyfill",
     "./src/index"
   ],
   output: {
     filename: "index.js",
-    path: path.join(__dirname, "build")
+    path: path.join(__dirname, "build"),
+    publicPath: 'http://localhost:8080/'
   },
   module: {
     // preLoaders: [{
@@ -27,16 +28,16 @@ module.exports = {
     "noParse": /\.map$/
   },
   plugins: [
+    new webpack.NoErrorsPlugin(),
     new CopyWebpackPlugin([{
       from: "./package.json",
     }, {
-      from: "./src/main.js",
+      from: "./src/index.css",
+    },{
+      from: "./src/index.html",
     }, {
-      from: "./src/index.html"
-    }, {
-      from: "./node_modules/xterm/dist/xterm.css"
+      from: "./src/main.js"
     }]),
-    new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
         "NODE_ENV": JSON.stringify("development")

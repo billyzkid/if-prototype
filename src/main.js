@@ -15,18 +15,18 @@ function createWindow() {
     slashes: true
   }));
   
-  win.webContents.on("did-finish-load", () => {
-    const npm = require("npm");
-    npm.load(() => {
-      npm.commands.install(["sillyname"], (error) => {
-        if (error) {
-          console.error(error);
-        } else if (win) {
-          win.webContents.send("did-finish-load-plugins");
-        }
-      });
-    });
-  });
+  // win.webContents.on("did-finish-load", () => {
+  //   const npm = require("npm");
+  //   npm.load(() => {
+  //     npm.commands.install(["sillyname"], (error) => {
+  //       if (error) {
+  //         console.error(error);
+  //       } else if (win) {
+  //         win.webContents.send("did-finish-load-plugins");
+  //       }
+  //     });
+  //   });
+  // });
 
   win.on("closed", () => {
     win = null;
